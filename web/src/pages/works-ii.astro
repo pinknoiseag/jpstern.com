@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import manifest from '../data/gallery-manifest.json';
+
+const gallery = manifest.find((g) => g.slug === 'works-ii') ?? {
+  title: 'Sensual',
+  description: 'Sensual und Implied Photography — JP Stern Photography.',
+  images: [],
+};
+---
+
+<Layout title={gallery.title} description={gallery.description ?? 'Portfolio — JP Stern Photography'}>
+  <GalleryGrid title={gallery.title} images={gallery.images} galleryId="works-ii" />
+</Layout>

@@ -1,0 +1,172 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+const eyebrow = 'Traveling Photographer';
+const cta = { href: '/contact/', label: 'Shooting planen' };
+
+const slideCopy = [
+  {
+    headline: 'Starke Frauen. Natürlich. Echt.',
+    sub: 'Fine Art Portrait & Sensual Photography',
+  },
+  {
+    headline: 'Kunst. Intim. Respektvoll.',
+    sub: 'Porträt · Lifestyle · Implied · Art Nude',
+  },
+  {
+    headline: 'Gemeinsam Schönes erschaffen.',
+    sub: 'Moodboard, klare Grenzen — TFP für passende Projekte',
+  },
+];
+
+const heroDir = path.join(process.cwd(), 'public/images/hero');
+const heroImages = fs.existsSync(heroDir)
+  ? fs
+      .readdirSync(heroDir)
+      .filter((f) => /\.webp$/i.test(f))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map((f) => `/images/hero/${f}`)
+  : [];
+
+const slides = slideCopy.map((copy, i) => ({
+  ...copy,
+  image: heroImages.length ? heroImages[i % heroImages.length] : null,
+}));
+---
+
+<section class="hero" aria-label="Hero">
+  {slides.map((slide, i) => (
+    <article class:list={['slide', { active: i === 0 }]} data-slide={i}>
+      {slide.image && (
+        <img src={slide.image} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+      )}
+      <div class="overlay" />
+      <div class="content container">
+        <p class="eyebrow">{eyebrow}</p>
+        {i === 0 ? <h1 class="headline">{slide.headline}</h1> : <p class="headline">{slide.headline}</p>}
+        <p class="sub">{slide.sub}</p>
+        <a href={cta.href} class="btn btn-primary">{cta.label}</a>
+      </div>
+    </article>
+  ))}
+  <div class="dots" role="tablist" aria-label="Slides">
+    {slides.map((_, i) => (
+      <button type="button" role="tab" class:list={['dot', { active: i === 0 }]} data-goto={i} aria-label={`Slide ${i + 1}`} />
+    ))}
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.hero .slide');
+  const dots = document.querySelectorAll('.hero .dot');
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function show(n: number) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === n));
+    dots.forEach((d, i) => d.classList.toggle('active', i === n));
+    current = n;
+  }
+
+  function next() {
+    show((current + 1) % slides.length);
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const n = Number((dot as HTMLElement).dataset.goto);
+      show(n);
+      clearInterval(timer);
+      timer = setInterval(next, 7000);
+    });
+  });
+
+  const hero = document.querySelector('.hero');
+  timer = setInterval(next, 7000);
+  hero?.addEventListener('mouseenter', () => clearInterval(timer));
+  hero?.addEventListener('mouseleave', () => {
+    timer = setInterval(next, 7000);
+  });
+</script>
+
+<style>
+  .hero {
+    position: relative;
+    height: min(88vh, 820px);
+    overflow: hidden;
+    background: #000;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.4) 100%);
+  }
+  .content {
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+  }
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a86a;
+  }
+  .headline {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #fff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+    margin: 0 0 0.75rem;
+  }
+  .sub {
+    margin: 0 0 1.75rem;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.88);
+  }
+  .dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6rem;
+    z-index: 3;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  .dot.active {
+    background: #fff;
+    border-color: #fff;
+  }
+</style>

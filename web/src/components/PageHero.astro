@@ -1,0 +1,80 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  /** Ordner unter public/images/ — nimmt cover.webp, hero.webp oder erstes .webp */
+  imageDir?: string;
+  image?: string;
+}
+
+const { title, subtitle, imageDir = 'about', image: imageProp } = Astro.props;
+
+function resolveImage(): string | null {
+  if (imageProp) return imageProp;
+  const dir = path.join(process.cwd(), 'public/images', imageDir);
+  if (!fs.existsSync(dir)) return null;
+  const preferred = ['cover.webp', 'hero.webp'];
+  for (const name of preferred) {
+    if (fs.existsSync(path.join(dir, name))) return `/images/${imageDir}/${name}`;
+  }
+  const first = fs
+    .readdirSync(dir)
+    .filter((f) => /\.webp$/i.test(f) && !/portrait/i.test(f))
+    .sort()[0];
+  return first ? `/images/${imageDir}/${first}` : null;
+}
+
+const bg = resolveImage();
+---
+
+<section class="page-hero" style={bg ? `background-image: url('${bg}')` : undefined}>
+  <div class="page-hero-overlay" />
+  <div class="page-hero-content container">
+    <h1 set:html={title.replace(/\n/g, '<br />')} />
+    {subtitle && <p class="subtitle">{subtitle}</p>}
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    min-height: 42vh;
+    display: flex;
+    align-items: flex-end;
+    background-color: #111;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2.5rem;
+  }
+  .page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0 2.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .page-hero-content h1 {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+    margin: 0;
+  }
+  .subtitle {
+    margin: 0.75rem 0 0;
+    color: var(--silver);
+    font-size: 1.1rem;
+  }
+</style>

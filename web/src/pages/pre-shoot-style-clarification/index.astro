@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PreShootGate from '../../components/preshoot/PreShootGate';
+import PreShootHub from '../../components/preshoot/PreShootHub';
+import manifest from '../../data/preshoot-manifest.json';
+---
+
+<Layout title="Pre-Shoot Stilabklärung" noindex>
+  <div class="container">
+    <PreShootGate client:load>
+      <PreShootHub client:load categories={manifest} />
+    </PreShootGate>
+  </div>
+</Layout>

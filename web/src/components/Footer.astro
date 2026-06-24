@@ -1,0 +1,124 @@
+---
+const year = new Date().getFullYear();
+
+const contact = {
+  instagram: 'https://www.instagram.com/jpstern.photography/',
+  instagramHandle: '@jpstern.photography',
+  email: 'info@jpstern.com',
+  phone: '+506 8687 9292',
+  whatsapp: 'https://wa.me/50686879292',
+  tagline: 'The Traveling Photographer',
+};
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="tagline">{contact.tagline}</p>
+
+    <div class="footer-contact" aria-label="Kontakt">
+      <a
+        href={contact.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-link"
+        aria-label={`Instagram: ${contact.instagramHandle}`}
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg>
+        <span>{contact.instagramHandle}</span>
+      </a>
+
+      <a href={`mailto:${contact.email}`} class="footer-link" aria-label={`E-Mail: ${contact.email}`}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+        <span>{contact.email}</span>
+      </a>
+
+      <a
+        href={contact.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-link"
+        aria-label={`WhatsApp: ${contact.phone}`}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" />
+        </svg>
+        <span>{contact.phone}</span>
+      </a>
+    </div>
+
+    <p class="copy">© {year} JP Stern Photography</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    z-index: 20;
+    flex-shrink: 0;
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.75rem 0 3rem;
+    text-align: center;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .tagline {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: var(--silver);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem 2rem;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.72);
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover {
+    color: var(--gold);
+  }
+
+  .footer-link svg {
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  .copy {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 520px) {
+    .footer-contact {
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+  }
+</style>

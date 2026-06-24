@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "pre-shoot-lifestyle",
+    "folder": "lifestyle",
+    "idPrefix": "LI",
+    "title": "Lifestyle",
+    "emailCategory": "Lifestyle",
+    "hubLabel": "Lifestyle"
+  },
+  {
+    "slug": "pre-shoot-sensual-portrait",
+    "folder": "sensual-portrait",
+    "idPrefix": "SP",
+    "title": "Sensual - Portraits",
+    "emailCategory": "Sensual - Portraits",
+    "hubLabel": "Sensual Portrait"
+  },
+  {
+    "slug": "pre-shoot-sensual-implied",
+    "folder": "sensual-implied",
+    "idPrefix": "SI",
+    "title": "Sensual - Implied nudity",
+    "emailCategory": "Sensual - Implied nudity",
+    "hubLabel": "Sensual Implied Nudity"
+  },
+  {
+    "slug": "pre-shoot-sensual-bedroom",
+    "folder": "sensual-bedroom",
+    "idPrefix": "SB",
+    "title": "Sensual - Hotel/Bedroom",
+    "emailCategory": "Sensual - Hotel / Bedroom",
+    "hubLabel": "Sensual Hotel / Bedroom"
+  },
+  {
+    "slug": "pre-shoot-sensual-bodyscapes",
+    "folder": "sensual-bodyscapes",
+    "idPrefix": "BO",
+    "title": "Sensual - Bodyscapes",
+    "emailCategory": "Sensual - Bodyscapes",
+    "hubLabel": "Sensual Bodyscapes"
+  },
+  {
+    "slug": "pre-shoot-sensual-shibari",
+    "folder": "sensual-shibari",
+    "idPrefix": "SS",
+    "title": "Sensual - Shibari",
+    "emailCategory": "Sensual - Shibari",
+    "hubLabel": "Sensual Shibari"
+  },
+  {
+    "slug": "pre-shoot-sensual-nude",
+    "folder": "sensual-nude",
+    "idPrefix": "SN",
+    "title": "Sensual - Nude",
+    "emailCategory": "Sensual - Nude",
+    "hubLabel": "Sensual Nude",
+    "hubHiddenUntilImages": true
+  }
+]

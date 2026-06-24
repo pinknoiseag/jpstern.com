@@ -1,0 +1,428 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import { faqHomeItems } from '../data/faq';
+
+const styles = [
+  { title: 'Porträt', desc: 'Ausdruck, Persönlichkeit, Blick' },
+  { title: 'Lifestyle', desc: 'Natürlich, lebendig, unterwegs' },
+  { title: 'Sensual', desc: 'Implied, sinnlich, respektvoll' },
+  { title: 'Art Nude', desc: 'Körper als Kunst, zeitlos' },
+];
+
+const worksPreview = [
+  { href: '/works-i/', image: '/images/hero/01.webp', label: 'Works I' },
+  { href: '/works-ii/', image: '/images/hero/02.webp', label: 'Works II' },
+  { href: '/works-iii/', image: '/images/hero/03.webp', label: 'Works III' },
+];
+
+const steps = [
+  { n: '01', title: 'Anfrage', text: 'Kurz beschreiben, was du dir vorstellst — Stil, Stimmung, Rahmen.' },
+  {
+    n: '02',
+    title: 'Pre-Shoot Stilabklärung',
+    text: 'Wähle aus verschiedenen Bereichen, was dir gefällt — und deinem Stil entspricht.',
+  },
+  { n: '03', title: 'Gespräch', text: 'Moodboard, Grenzen und Erwartungen klären wir offen und unkompliziert.' },
+  {
+    n: '04',
+    title: 'Vorbereitung',
+    text: 'Vertrag, Location, Outfits, Timing — wir bestimmen gemeinsam, was zum Shooting passt.',
+  },
+  {
+    n: '05',
+    title: 'Shooting',
+    text: 'Gemeinsam Kunst erschaffen — mit Ruhe, Respekt und Spass vor und hinter der Kamera.',
+  },
+  {
+    n: '06',
+    title: 'Bilder erhalten',
+    text: 'Du bekommst alle nicht defekten Bilder in deiner privaten Galerie — die bearbeiteten Favoriten folgen je nach Auslastung.',
+  },
+];
+---
+
+<Layout title="Home" description="JP Stern — Fine Art Portrait, Lifestyle & Sensual Photography. Traveling Photographer in Sámara, Costa Rica.">
+  <HeroSlider />
+
+  <section class="home-intro">
+    <div class="container home-intro-inner">
+      <p class="home-eyebrow">Fine Art Photography</p>
+      <p class="home-lead">
+        Portrait, Lifestyle &amp; Sensual — mit Leidenschaft, Respekt und Raum für deine Persönlichkeit.
+      </p>
+      <p class="home-location">Derzeit in Sámara, Costa Rica · Schweiz &amp; Italien 2026</p>
+    </div>
+  </section>
+
+  <section class="home-quote">
+    <div class="container">
+      <blockquote>
+        „Ich fotografiere starke Frauen und zelebriere die weibliche Form.“
+      </blockquote>
+      <p class="quote-note">
+        Fotografie aus Leidenschaft, kein Business — professionell in der Qualität, persönlich im Umgang.
+      </p>
+      <a href="/about/" class="text-link">Über mich &amp; meine Philosophie →</a>
+    </div>
+  </section>
+
+  <section class="home-styles">
+    <div class="container">
+      <header class="section-head">
+        <p class="home-eyebrow">Stile</p>
+        <h2>Was wir shooten können</h2>
+      </header>
+      <ul class="style-grid">
+        {styles.map((item) => (
+          <li class="style-card">
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-works">
+    <div class="container">
+      <header class="section-head section-head-row">
+        <div>
+          <p class="home-eyebrow">Portfolio</p>
+          <h2>Works</h2>
+        </div>
+        <a href="/works-i/" class="text-link">Alle Galerien →</a>
+      </header>
+      <ul class="works-grid">
+        {worksPreview.map((item) => (
+          <li>
+            <a href={item.href} class="works-card">
+              <img src={item.image} alt="" loading="lazy" width="640" height="800" />
+              <span class="works-label">{item.label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-process">
+    <div class="container">
+      <header class="section-head">
+        <p class="home-eyebrow">Ablauf</p>
+        <h2>So läuft ein Shooting</h2>
+      </header>
+      <ol class="process-grid">
+        {steps.map((step) => (
+          <li class="process-step">
+            <span class="process-n">{step.n}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="home-faq">
+    <div class="container">
+      <header class="section-head section-head-row">
+        <div>
+          <p class="home-eyebrow">FAQ</p>
+          <h2>Häufige Fragen</h2>
+        </div>
+        <a href="/faq/" class="text-link">Alle Fragen →</a>
+      </header>
+      <ul class="faq-grid">
+        {faqHomeItems.map((item, i) => (
+          <li class="process-step">
+            <span class="process-n">{String(i + 1).padStart(2, '0')}</span>
+            <h3>
+              <a href={`/faq/#${item.id}`}>{item.question}</a>
+            </h3>
+            <p>
+              {item.homeTeaser}{' '}
+              <a href={`/faq/#${item.id}`} class="faq-more">→ FAQ</a>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-cta">
+    <div class="container home-cta-inner">
+      <h2>Lust auf ein Shooting?</h2>
+      <p>Schreib mir kurz deine Idee — ich melde mich bei dir.</p>
+      <div class="home-cta-actions">
+        <a href="/contact/" class="btn btn-primary">Shooting planen</a>
+        <a href="/about/" class="btn">Über mich</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .home-eyebrow {
+    margin: 0 0 0.6rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a86a;
+  }
+  .text-link {
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    color: #d4bc8a;
+  }
+  .text-link:hover {
+    color: #fff;
+  }
+  .section-head {
+    margin-bottom: 2rem;
+  }
+  .section-head h2 {
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+  }
+  .section-head-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .home-intro {
+    padding: 4rem 0 3.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .home-intro-inner {
+    max-width: 44rem;
+  }
+  .home-lead {
+    margin: 0 0 1rem;
+    font-family: var(--font-serif);
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    line-height: 1.55;
+    color: var(--silver);
+  }
+  .home-location {
+    margin: 0;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+
+  .home-quote {
+    padding: 4.5rem 0;
+    text-align: center;
+    background: var(--bg-elevated);
+  }
+  blockquote {
+    margin: 0 auto 1.25rem;
+    max-width: 36rem;
+    padding: 0;
+    border: none;
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-style: italic;
+    line-height: 1.45;
+    color: #d4bc8a;
+  }
+  .quote-note {
+    margin: 0 auto 1.5rem;
+    max-width: 32rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .home-styles {
+    padding: 4.5rem 0;
+  }
+  .style-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .style-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    transition: border-color 0.2s;
+  }
+  .style-card:hover {
+    border-color: rgba(201, 168, 106, 0.35);
+  }
+  .style-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .style-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .home-works {
+    padding: 4.5rem 0;
+    background: var(--bg-elevated);
+  }
+  .works-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .works-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 4 / 5;
+    background: #111;
+  }
+  .works-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease, opacity 0.3s;
+  }
+  .works-card:hover img {
+    transform: scale(1.04);
+    opacity: 0.88;
+  }
+  .works-label {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1.25rem 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  }
+
+  .home-process,
+  .home-faq {
+    padding: 4.5rem 0;
+  }
+  .process-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .process-step {
+    padding: 1.5rem 0 0;
+    border-top: 1px solid var(--border);
+  }
+  .process-n {
+    display: block;
+    margin-bottom: 0.85rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: #c9a86a;
+  }
+  .process-step h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .process-step p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+  .process-step h3 a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+  .process-step h3 a:hover {
+    color: var(--gold);
+  }
+  .faq-more {
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    color: #d4bc8a;
+    white-space: nowrap;
+  }
+  .faq-more:hover {
+    color: #fff;
+  }
+
+  .faq-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .home-cta {
+    padding: 5rem 0 6rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  .home-cta-inner {
+    max-width: 36rem;
+  }
+  .home-cta h2 {
+    margin: 0 0 0.75rem;
+    color: #fff;
+    font-weight: 400;
+  }
+  .home-cta p {
+    margin: 0 0 2rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.65;
+  }
+  .home-cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 900px) {
+    .style-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .works-grid,
+    .process-grid,
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .works-card {
+      aspect-ratio: 16 / 10;
+    }
+  }
+  @media (max-width: 520px) {
+    .style-grid {
+      grid-template-columns: 1fr;
+    }
+    .home-intro,
+    .home-quote,
+    .home-styles,
+    .home-works,
+    .home-process,
+    .home-faq {
+      padding-block: 3rem;
+    }
+  }
+</style>

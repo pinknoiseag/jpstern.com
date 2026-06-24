@@ -1,0 +1,177 @@
+---
+interface ImageItem {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  images: ImageItem[];
+  galleryId: string;
+}
+
+const { title, images, galleryId } = Astro.props;
+---
+
+<section class="gallery-page container" data-gallery={galleryId}>
+  <header class="gallery-header">
+    <h1>{title}</h1>
+    {images.length === 0 && (
+      <p class="empty">Noch keine Bilder — JPG/PNG in <code>public/gallery/{galleryId}/</code> legen, dann <code>npm run build</code>.</p>
+    )}
+  </header>
+
+  {images.length > 0 && (
+    <>
+      <div class="gallery-grid">
+        {images.map((img, i) => (
+          <button type="button" class="gallery-item" data-index={i} aria-label={`Bild ${i + 1} vergrössern`}>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </button>
+        ))}
+      </div>
+
+      <dialog class="lightbox" aria-label="Galerie Lightbox">
+        <button type="button" class="lb-close" aria-label="Schliessen">×</button>
+        <button type="button" class="lb-prev" aria-label="Vorheriges Bild">‹</button>
+        <button type="button" class="lb-next" aria-label="Nächstes Bild">›</button>
+        <img class="lb-img" src="" alt="" />
+        <p class="lb-counter"></p>
+      </dialog>
+    </>
+  )}
+</section>
+
+<script define:vars={{ images, galleryId }}>
+  const section = document.querySelector(`[data-gallery="${galleryId}"]`);
+  if (!section || !images.length) return;
+
+  const dialog = section.querySelector('.lightbox');
+  const lbImg = section.querySelector('.lb-img');
+  const lbCounter = section.querySelector('.lb-counter');
+  let index = 0;
+
+  function show(i) {
+    index = (i + images.length) % images.length;
+    const img = images[index];
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCounter.textContent = `${index + 1} / ${images.length}`;
+  }
+
+  section.querySelectorAll('.gallery-item').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      show(Number(btn.dataset.index));
+      dialog.showModal();
+    });
+  });
+
+  section.querySelector('.lb-close')?.addEventListener('click', () => dialog.close());
+  section.querySelector('.lb-prev')?.addEventListener('click', () => show(index - 1));
+  section.querySelector('.lb-next')?.addEventListener('click', () => show(index + 1));
+
+  dialog?.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!dialog.open) return;
+    if (e.key === 'ArrowLeft') show(index - 1);
+    if (e.key === 'ArrowRight') show(index + 1);
+    if (e.key === 'Escape') dialog.close();
+  });
+</script>
+
+<style>
+  .gallery-page {
+    padding: 2.5rem 0 4rem;
+  }
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .empty {
+    color: var(--text-muted);
+    max-width: 36rem;
+    margin: 1rem auto 0;
+  }
+  .empty code {
+    font-size: 0.85em;
+    color: var(--silver);
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+  }
+  .gallery-item {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+  .gallery-item:hover img {
+    transform: scale(1.03);
+  }
+  .lightbox {
+    border: none;
+    padding: 0;
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    background: rgba(0, 0, 0, 0.92);
+    color: #fff;
+  }
+  .lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .lb-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    margin: 2rem auto 0.5rem;
+    display: block;
+  }
+  .lb-counter {
+    text-align: center;
+    margin: 0 0 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  .lb-close,
+  .lb-prev,
+  .lb-next {
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.25rem 0.75rem;
+  }
+  .lb-close {
+    top: 1rem;
+    right: 1rem;
+  }
+  .lb-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .lb-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+</style>

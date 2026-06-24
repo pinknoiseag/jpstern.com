@@ -1,0 +1,58 @@
+---
+import type { FaqBlock } from '../data/faq';
+
+interface Props {
+  blocks: FaqBlock[];
+}
+
+const { blocks } = Astro.props;
+---
+
+<div class="faq-answer">
+  {blocks.map((block) => {
+    if (block.type === 'p') {
+      return <p>{block.text}</p>;
+    }
+    if (block.type === 'h4') {
+      return <h4>{block.text}</h4>;
+    }
+    return (
+      <ul>
+        {block.items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    );
+  })}
+</div>
+
+<style>
+  .faq-answer :global(p),
+  .faq-answer :global(ul) {
+    margin: 0 0 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.98rem;
+  }
+
+  .faq-answer :global(p:last-child),
+  .faq-answer :global(ul:last-child) {
+    margin-bottom: 0;
+  }
+
+  .faq-answer :global(ul) {
+    padding-left: 1.2rem;
+  }
+
+  .faq-answer :global(li + li) {
+    margin-top: 0.35rem;
+  }
+
+  .faq-answer :global(h4) {
+    margin: 0.5rem 0 0.4rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--silver);
+  }
+</style>

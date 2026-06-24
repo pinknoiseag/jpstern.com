@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqAnswer from '../components/FaqAnswer.astro';
+import { faqSections } from '../data/faq';
+---
+
+<Layout
+  title="FAQ"
+  description="Häufige Fragen zu Shootings bei JP Stern Photography — Ablauf, Locations, Bilder, Veröffentlichung und Vorbereitung."
+>
+  <PageHero
+    title="Häufige Fragen"
+    subtitle="Alles Wichtige rund um dein Shooting — transparent und unkompliziert."
+    imageDir="hero"
+    image="/images/hero/02.webp"
+  />
+
+  <section class="faq-section">
+    <div class="container faq-inner">
+      {faqSections.map((section) => (
+        <div class="faq-group" id={section.id}>
+          <h2 class="faq-group-title">{section.title}</h2>
+          <ul class="faq-list">
+            {section.items.map((item) => (
+              <li class="faq-item" id={item.id}>
+                <details>
+                  <summary>
+                    <span class="faq-question">{item.question}</span>
+                    <span class="faq-icon" aria-hidden="true" />
+                  </summary>
+                  <FaqAnswer blocks={item.blocks} />
+                </details>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <div class="faq-cta">
+        <p>Noch Fragen? Schreib mir — ich antworte persönlich und offen.</p>
+        <a href="/contact/" class="btn btn-primary">Shooting planen</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const faqDetails = document.querySelectorAll('.faq-section details');
+
+  faqDetails.forEach((details) => {
+    details.addEventListener('toggle', () => {
+      if (!details.open) return;
+      faqDetails.forEach((other) => {
+        if (other !== details) other.open = false;
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-section {
+    padding: 0 0 5rem;
+  }
+
+  .faq-inner {
+    max-width: 44rem;
+  }
+
+  .faq-group + .faq-group {
+    margin-top: 2.75rem;
+  }
+
+  .faq-group-title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+
+  .faq-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    scroll-margin-top: calc(var(--header-h) + 1rem);
+  }
+
+  .faq-item details {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .faq-item details[open] {
+    border-color: rgba(201, 168, 106, 0.35);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question {
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    color: #fff;
+    line-height: 1.35;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: relative;
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.85rem;
+    height: 1px;
+    background: var(--gold);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+  }
+
+  .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  details[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+  }
+
+  .faq-item :global(.faq-answer) {
+    padding: 0 1.5rem 1.35rem;
+  }
+
+  .faq-cta {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .faq-cta p {
+    margin: 0 0 1.5rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  @media (max-width: 520px) {
+    .faq-item summary {
+      padding: 1.1rem 1.15rem;
+    }
+
+    .faq-item :global(.faq-answer) {
+      padding: 0 1.15rem 1.15rem;
+    }
+  }
+</style>

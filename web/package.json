@@ -1,0 +1,31 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "prebuild": "node scripts/optimize-images.mjs && node scripts/generate-preshoot-manifest.mjs && node scripts/generate-gallery-manifest.mjs",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sync": "node scripts/sync-assets.mjs",
+    "portfolio": "node scripts/prepare-portfolio.mjs",
+    "portfolio:apply": "node scripts/prepare-portfolio.mjs --apply"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.7",
+    "@astrojs/sitemap": "^3.7.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.4.6",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.1"
+  }
+}

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /pre-shoot-style-clarification/
+Disallow: /pre-shoot-lifestyle/
+Disallow: /pre-shoot-sensual-bedroom/
+Disallow: /pre-shoot-sensual-portrait/
+Disallow: /pre-shoot-sensual-shibari/
+Disallow: /pre-shoot-sensual-nude/
+Disallow: /pre-shoot-sensual-implied/
+
+Sitemap: https://jpstern.com/sitemap-index.xml

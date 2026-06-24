@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PreShootGate from '../components/preshoot/PreShootGate';
+import PreShootReviewer from '../components/preshoot/PreShootReviewer';
+import manifest from '../data/preshoot-manifest.json';
+import type { PreshootCategoryManifest } from '../data/preshoot-types';
+
+export function getStaticPaths() {
+  return manifest
+    .filter((c) => c.slug.startsWith('pre-shoot-') && c.slug !== 'pre-shoot-style-clarification')
+    .map((cat) => ({
+      params: { slug: cat.slug },
+      props: { cat },
+    }));
+}
+
+interface Props {
+  cat: PreshootCategoryManifest;
+}
+
+const { cat } = Astro.props;
+---
+
+<Layout title={`Pre-Shoot — ${cat.title}`} noindex>
+  <div class="container">
+    <PreShootGate client:load>
+      <PreShootReviewer
+        client:load
+        title={cat.title}
+        emailCategory={cat.emailCategory}
+        photos={cat.photos}
+      />
+    </PreShootGate>
+  </div>
+</Layout>

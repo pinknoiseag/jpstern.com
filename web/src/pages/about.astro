@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const heroImage = '/images/about/hero-bw.webp';
+---
+
+<Layout title="About Me" description="JP Stern — Fotografie aus Leidenschaft. Über mich, meine Arbeit und meine Philosophie.">
+  <section class="about-hero" style={`background-image: url('${heroImage}')`}>
+    <div class="about-overlay" aria-hidden="true" />
+
+    <div class="about-stage">
+      <h1 class="about-title">
+        <span class="title-line">Fotografie:</span>
+        <span class="title-line">Reine Leidenschaft,<wbr> kein&nbsp;Business.</span>
+      </h1>
+
+      <div class="about-prose">
+        <p class="byline">Mein Name ist JP Stern.</p>
+
+        <p>
+          Seit meinem 23. Lebensjahr bin ich Unternehmer. Mit etwas Glück und Hartnäckigkeit habe ich mir die Freiheit erarbeitet,
+          nur noch dort und dann zu arbeiten, wo und wann ich es möchte.
+        </p>
+        <p>
+          Derzeit lebe ich hauptsächlich in Costa Rica, verbringe aber jedes Jahr Zeit in der Schweiz und anderen Ländern.
+          Diese wechselnden Welten inspirieren mich laufend.
+        </p>
+        <p>
+          Mit etwa 25 Jahren wurde bei mir eine schwere Augenkrankheit diagnostiziert – mit der Möglichkeit, vollständig zu erblinden.
+          Das war ein sehr schwieriger Moment, doch zum Glück ist es nicht so weit gekommen. Seither haben Bilder und das Sehen selbst
+          für mich eine viel tiefere Bedeutung gewonnen.
+        </p>
+        <p>
+          Die Fotografie war für mich in stressigen Zeiten immer ein wichtiger Ausgleich und bot Raum für Kreativität.
+          Mittlerweile ist daraus eine echte Leidenschaft geworden. Ich arbeite professionell und mit hoher Qualität,
+          doch die Fotografie soll bewusst ein <strong>Hobby</strong> bleiben. Es geht mir um den puren Spass am gemeinsamen Erarbeiten
+          und am Shooten grossartiger Bilder.
+        </p>
+
+        <blockquote>
+          „Ich fotografiere starke Frauen und zelebriere die weibliche Form.“
+        </blockquote>
+
+        <p>
+          Frauen, stark und verletzlich zugleich, mutig und schüchtern, frech und zurückhaltend.
+          Diese Dichotomie fasziniert mich seit jeher und ich versuche sie bildlich festzuhalten.
+        </p>
+        <p>
+          Meine Bilder sind oft schwarz-weiss – zeitlos, intensiv und mit einer sinnlichen, manchmal provokativen Note.
+        </p>
+        <p>
+          Ob Porträt, Boudoir, Implied oder Art Nude: Im Mittelpunkt steht immer der besondere Ausdruck und die Persönlichkeit der Frau vor der Kamera.
+        </p>
+        <p>
+          Mit Moodboards, offenen Gesprächen und klaren Absprachen zu deinen Grenzen kreieren wir gemeinsam Kunst – genau so, wie sie uns gefällt.
+        </p>
+
+        <p class="closing"><strong>Ich freue mich, von dir zu hören!</strong></p>
+        <p class="cta-row"><a href="/contact/" class="btn btn-primary">Kontakt aufnehmen</a></p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center 22%;
+    background-color: #0a0a0a;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .about-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.52) 45%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    pointer-events: none;
+  }
+
+  .about-stage {
+    position: relative;
+    z-index: 1;
+    width: min(980px, 100% - clamp(2rem, 6vw, 4rem));
+    margin: 0 auto;
+    padding:
+      calc(var(--header-h) + 0.25rem)
+      0
+      clamp(4rem, 8vh, 6rem);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-title {
+    position: absolute;
+    top: clamp(3.25rem, 7vh, 4.75rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(1lh);
+    width: min(920px, 100%);
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: clamp(2.35rem, 5.8vw, 3.85rem);
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .title-line {
+    display: block;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    letter-spacing: 0.01em;
+  }
+
+  .about-prose {
+    width: 100%;
+    max-width: 44rem;
+    margin-top: clamp(13.5rem, 30vh, 17.5rem);
+    padding-inline: clamp(0.25rem, 1.5vw, 1rem);
+    text-align: left;
+    font-family: var(--font-sans);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.06rem;
+    font-weight: 400;
+    line-height: 1.82;
+    letter-spacing: 0.01em;
+  }
+
+  .byline {
+    color: var(--gold);
+    font-family: var(--font-sans);
+    font-size: 1.22rem;
+    font-weight: 500;
+    margin: 0 0 1.35rem;
+    letter-spacing: 0.02em;
+  }
+
+  .about-prose p {
+    margin: 0 0 1.3rem;
+  }
+
+  blockquote {
+    margin: 1.85rem 0;
+    padding: 0;
+    border: none;
+    font-family: var(--font-serif);
+    font-size: 1.32rem;
+    font-style: italic;
+    color: #d4bc8a;
+    line-height: 1.55;
+  }
+
+  .closing {
+    margin-top: 2rem !important;
+  }
+
+  .cta-row {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-hero {
+      background-attachment: scroll;
+      background-position: 58% 20%;
+    }
+
+    .about-stage {
+      width: min(980px, 100% - 1.5rem);
+      padding-top: calc(var(--header-h) + 0.25rem);
+      gap: 2rem;
+    }
+
+    .about-title {
+      position: static;
+      left: auto;
+      transform: none;
+      width: 100%;
+      margin: 0 0 2rem;
+    }
+
+    .about-prose {
+      margin-top: 0;
+      max-width: 100%;
+      padding-inline: 0;
+    }
+
+    .title-line {
+      font-size: clamp(2rem, 9vw, 2.65rem);
+    }
+  }
+</style>

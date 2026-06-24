@@ -1,0 +1,372 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const heroImage = '/images/contact/hero.webp';
+const shootingOptions = [
+  'Porträt',
+  'Lifestyle',
+  'Sensual implied',
+  'Sensual topless',
+  'Art nude',
+  'Bodyscapes',
+  'Shibari',
+  'Andere',
+];
+---
+
+<Layout title="Kontakt" description="Kontakt zu JP Stern Photography — Shooting-Anfrage für Porträt, Lifestyle und Fine Art. TFP für passende Projekte.">
+  <section class="contact-page" style={`background-image: url('${heroImage}')`}>
+    <div class="contact-overlay" aria-hidden="true" />
+
+    <div class="contact-inner">
+      <header class="contact-header">
+        <h1>Lass uns dein Shooting planen.</h1>
+        <p class="lead">
+          Gute Bilder entstehen im Gespräch — mit Moodboard, klaren Grenzen und Raum für deine Persönlichkeit.
+          Schreib mir kurz, was du dir vorstellst; für passende Projekte stehe ich für <strong>TFP</strong> zur Verfügung.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form">
+          <div class="field-row">
+            <label>
+              Vorname *
+              <input type="text" name="vorname" required autocomplete="given-name" />
+            </label>
+            <label>
+              Nachname *
+              <input type="text" name="nachname" required autocomplete="family-name" />
+            </label>
+          </div>
+
+          <label>
+            E-Mail-Adresse *
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+
+          <label>
+            Telefonnummer
+            <input type="tel" name="telefon" autocomplete="tel" />
+          </label>
+
+          <label>
+            Instagram-Benutzername
+            <input type="text" name="instagram" placeholder="@username" />
+          </label>
+
+          <fieldset class="shooting-field">
+            <legend>Art des Shootings</legend>
+            <div class="checks">
+              {shootingOptions.map((opt) => (
+                <label class="check">
+                  <input type="checkbox" name="shooting_art" value={opt} />
+                  <span>{opt}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <label>
+            Deine Nachricht *
+            <textarea name="nachricht" rows="6" required placeholder="Kurz: was du dir vorstellst, wann, wo …" />
+          </label>
+
+          <p class="file-note">
+            Moodboard oder Referenzbilder: an
+            <a href="mailto:info@jpstern.com">info@jpstern.com</a> oder per Instagram.
+          </p>
+
+          <button type="submit" class="btn btn-primary submit-btn">Nachricht senden</button>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Direkt erreichen</h2>
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:info@jpstern.com">info@jpstern.com</a>
+            </li>
+            <li>
+              <a href="https://wa.me/50686879292" target="_blank" rel="noopener noreferrer">
+                WhatsApp: +506 8687 9292<sup class="cr-mark" aria-hidden="true">*</sup>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/jpstern.photography/" target="_blank" rel="noopener noreferrer">
+                @jpstern.photography
+              </a>
+            </li>
+          </ul>
+          <p class="response-note">Ich freue mich auf deine Nachricht.</p>
+          <p class="location">Traveling Photographer · Sámara, Costa Rica</p>
+          <p class="dial-note"><span class="cr-mark" aria-hidden="true">*</span> Vorwahl Costa Rica (+506)</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form as HTMLFormElement);
+    const name = `${fd.get('vorname')} ${fd.get('nachname')}`.trim();
+    const arts = fd.getAll('shooting_art').join(', ') || '—';
+    const subject = encodeURIComponent(`Anfrage — ${name}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${name}`,
+        `E-Mail: ${fd.get('email')}`,
+        `Telefon: ${fd.get('telefon') || '—'}`,
+        `Instagram: ${fd.get('instagram') || '—'}`,
+        `Shooting: ${arts}`,
+        '',
+        String(fd.get('nachricht') || ''),
+      ].join('\n'),
+    );
+    window.location.href = `mailto:info@jpstern.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
+<style>
+  .contact-page {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: clip;
+    background-size: cover;
+    background-position: 26% 16%;
+    background-color: #0a0a0a;
+    background-attachment: fixed;
+  }
+  .contact-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 22%),
+      linear-gradient(
+        100deg,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.28) 36%,
+        rgba(0, 0, 0, 0.62) 50%,
+        rgba(0, 0, 0, 0.78) 100%
+      );
+  }
+  .contact-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 2.5rem max(1.25rem, 4vw) 4rem;
+    box-sizing: border-box;
+  }
+  .contact-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .contact-header h1 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 1rem;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+  }
+  .lead {
+    max-width: 40rem;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+  .lead strong {
+    color: #d4bc8a;
+    font-weight: 500;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 1.5rem;
+    align-items: start;
+    max-width: 920px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: clamp(2.5rem, 11vh, 6rem);
+  }
+  .contact-form {
+    background: rgba(10, 10, 10, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+  .contact-form label,
+  .shooting-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .shooting-field {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+  }
+  .shooting-field legend {
+    padding: 0 0.25rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  input,
+  textarea {
+    font: inherit;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+  }
+  input:focus,
+  textarea:focus {
+    outline: 2px solid #c9a86a;
+    outline-offset: 1px;
+    border-color: transparent;
+  }
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .checks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem 1rem;
+    margin-top: 0.35rem;
+  }
+  .check {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.92rem;
+    cursor: pointer;
+  }
+  .check input {
+    width: auto;
+    margin: 0;
+    accent-color: #c9a86a;
+  }
+  .file-note {
+    margin: 0;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.5;
+  }
+  .file-note a {
+    color: #c9a86a;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
+  .contact-aside {
+    background: rgba(10, 10, 10, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.75rem;
+    backdrop-filter: blur(12px);
+  }
+  .contact-aside h2 {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c9a86a;
+    margin: 0 0 1.25rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+  }
+  .contact-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+  }
+  .contact-links li {
+    margin-bottom: 0.75rem;
+  }
+  .contact-links a {
+    color: #fff;
+    font-size: 1.05rem;
+  }
+  .contact-links a:hover {
+    color: #d4bc8a;
+  }
+  .response-note {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+  .response-note strong {
+    color: #c9a86a;
+  }
+  .location {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.04em;
+  }
+  .cr-mark {
+    font-size: 0.65em;
+    line-height: 0;
+    vertical-align: super;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 400;
+  }
+  .dial-note {
+    margin: 0.65rem 0 0;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.4;
+  }
+  @media (max-width: 860px) {
+    .contact-page {
+      background-attachment: scroll;
+      background-position: center 20%;
+    }
+    .contact-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.72) 38%,
+        rgba(0, 0, 0, 0.88) 100%
+      );
+    }
+    .contact-grid {
+      grid-template-columns: 1fr;
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+    .contact-form,
+    .contact-aside {
+      background: rgba(10, 10, 10, 0.72);
+    }
+    .contact-aside {
+      order: -1;
+    }
+  }
+  @media (max-width: 520px) {
+    .field-row,
+    .checks {
+      grid-template-columns: 1fr;
+    }
+    .contact-form {
+      padding: 1.25rem;
+    }
+  }
+</style>

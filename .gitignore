@@ -1,0 +1,20 @@
+.DS_Store
+*.zip
+
+# Astro site (web/)
+web/node_modules/
+web/dist/
+web/.astro/
+web/.env
+web/.env.production
+web/npm-debug.log*
+web/yarn-debug.log*
+web/yarn-error.log*
+web/pnpm-debug.log*
+web/.idea/
+
+# Raw portfolio imports — sync/build locally, not in git (~300MB+)
+web/portfolio-inbox/**
+!web/portfolio-inbox/.gitkeep
+!web/portfolio-inbox/rename-plan.example.json
+!web/portfolio-inbox/works-i/.gitkeep

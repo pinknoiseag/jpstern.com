@@ -1,0 +1,20 @@
+{
+  "works-i": {
+    "title": "Porträts",
+    "description": "Fine Art Porträts — JP Stern Photography.",
+    "seoPrefix": "portrait",
+    "altBase": "JP Stern Fine Art Porträt"
+  },
+  "works-ii": {
+    "title": "Sensual",
+    "description": "Sensual und Implied Photography — JP Stern Photography.",
+    "seoPrefix": "sensual",
+    "altBase": "JP Stern Sensual Fotografie"
+  },
+  "works-iii": {
+    "title": "Sensual Nude",
+    "description": "Sensual Nude und Art Nude — JP Stern Photography.",
+    "seoPrefix": "sensual-nude",
+    "altBase": "JP Stern Sensual Nude und Art Nude"
+  }
+}

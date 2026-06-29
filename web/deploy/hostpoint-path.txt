@@ -1,0 +1,17 @@
+# Hostpoint: absoluter Pfad zum Webroot (für AuthUserFile in .htaccess)
+#
+# Per SSH einloggen, in das Verzeichnis wechseln wo index.html liegt:
+#   cd ~/www
+#   pwd
+#
+# Varianten:
+#   /home/BENUTZERNAME/www              (Domain direkt im www-Root)
+#   /home/BENUTZERNAME/www/jpstern.com    (Unterordner pro Domain)
+#
+# In web/public/.htaccess ersetzen:
+#   __HOSTPOINT_WEBROOT__
+# durch den Ausgabe von pwd, z.B.:
+#   /home/BENUTZERNAME/www
+#
+# .htpasswd liegt im gleichen Ordner wie index.html:
+#   /home/BENUTZERNAME/www/.htpasswd

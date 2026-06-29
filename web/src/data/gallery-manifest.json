@@ -3,18 +3,861 @@
     "slug": "works-i",
     "title": "Porträts",
     "description": "Fine Art Porträts — JP Stern Photography.",
-    "images": []
+    "images": [
+      {
+        "src": "/gallery/works-i/001-Lifestyle-Blonde-woman-with-leather-jacket.webp",
+        "alt": "JP Stern Fine Art Porträt — Lifestyle Blonde woman with leather jacket"
+      },
+      {
+        "src": "/gallery/works-i/003-Blonde-woman-leather-jacket-autumn-foliage.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman leather jacket autumn foliage"
+      },
+      {
+        "src": "/gallery/works-i/004-Woman-black-hat-leather-jacket-stone-ruins-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black hat leather jacket stone ruins bw"
+      },
+      {
+        "src": "/gallery/works-i/006-Two-women-balance-autumn-park-concrete-blocks.webp",
+        "alt": "JP Stern Fine Art Porträt — Two women balance autumn park concrete blocks"
+      },
+      {
+        "src": "/gallery/works-i/007-Woman-hat-glasses-stone-ruins-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman hat glasses stone ruins bw"
+      },
+      {
+        "src": "/gallery/works-i/008-Two-women-gray-umbrella-lakeside.webp",
+        "alt": "JP Stern Fine Art Porträt — Two women gray umbrella lakeside"
+      },
+      {
+        "src": "/gallery/works-i/009-Two-women-lakeside-bench-smiling.webp",
+        "alt": "JP Stern Fine Art Porträt — Two women lakeside bench smiling"
+      },
+      {
+        "src": "/gallery/works-i/010-Woman-black-hat-swimsuit-beach-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black hat swimsuit beach portrait"
+      },
+      {
+        "src": "/gallery/works-i/011-Woman-knit-dress-beach-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman knit dress beach portrait"
+      },
+      {
+        "src": "/gallery/works-i/015-Blonde-woman-black-dress-studio-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman black dress studio portrait"
+      },
+      {
+        "src": "/gallery/works-i/020-Woman-beige-turtleneck-black-puffy-jacket-stone-castle-tower.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman beige turtleneck black puffy jacket stone castle tower"
+      },
+      {
+        "src": "/gallery/works-i/025-Woman-wavy-brown-hair-lying-on-bed-bedroom-window.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman wavy brown hair lying on bed bedroom window"
+      },
+      {
+        "src": "/gallery/works-i/030-Woman-yellow-off-shoulder-sweater-drinking-glass-blue-straw-shoulder-tattoo.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman yellow off shoulder sweater drinking glass blue straw shoulder tattoo"
+      },
+      {
+        "src": "/gallery/works-i/031-Woman-blonde-hair-aviator-sunglasses-beige-top-water-background.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman blonde hair aviator sunglasses beige top water background"
+      },
+      {
+        "src": "/gallery/works-i/032-Woman-blonde-hair-eyes-closed-taupe-top-water-background.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman blonde hair eyes closed taupe top water background"
+      },
+      {
+        "src": "/gallery/works-i/033-Woman-black-hat-off-shoulder-crop-top-denim-shorts-palm-trees-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black hat off shoulder crop top denim shorts palm trees bw"
+      },
+      {
+        "src": "/gallery/works-i/041-Woman-long-blonde-hair-denim-jacket-glass-reflection-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman long blonde hair denim jacket glass reflection bw"
+      },
+      {
+        "src": "/gallery/works-i/042-Woman-smiling-long-hair-knit-sweater-forest-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman smiling long hair knit sweater forest bw"
+      },
+      {
+        "src": "/gallery/works-i/043-Woman-black-vest-gray-sweater-moon-tattoo-smiling-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black vest gray sweater moon tattoo smiling bw"
+      },
+      {
+        "src": "/gallery/works-i/044-Woman-smiling-gray-sweater-black-vest-crossbody-bag-festival-lights-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman smiling gray sweater black vest crossbody bag festival lights bw"
+      },
+      {
+        "src": "/gallery/works-i/045-Woman-denim-jacket-white-crop-top-train-station-platform-smiling-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman denim jacket white crop top train station platform smiling bw"
+      },
+      {
+        "src": "/gallery/works-i/046-Woman-white-crop-top-jeans-train-station-platform-tattoo-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman white crop top jeans train station platform tattoo bw"
+      },
+      {
+        "src": "/gallery/works-i/048-Woman-blonde-hair-smiling-beige-sweater-outdoor-bokeh.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman blonde hair smiling beige sweater outdoor bokeh"
+      },
+      {
+        "src": "/gallery/works-i/049-Woman-blonde-hair-white-t-shirt-smiling-moon-tattoo-bracelets-outdoors.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman blonde hair white t shirt smiling moon tattoo bracelets outdoors"
+      },
+      {
+        "src": "/gallery/works-i/050-Woman-white-wrap-dress-directors-chair-outdoors-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman white wrap dress directors chair outdoors bw"
+      },
+      {
+        "src": "/gallery/works-i/051-Woman-aviator-sunglasses-pleated-dress-high-slit-outdoors-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman aviator sunglasses pleated dress high slit outdoors bw"
+      },
+      {
+        "src": "/gallery/works-i/052-Woman-aviator-sunglasses-flowing-dress-outdoors-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman aviator sunglasses flowing dress outdoors bw"
+      },
+      {
+        "src": "/gallery/works-i/053-Woman-aviator-sunglasses-flowing-dress-high-slit-barefoot-outdoors-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman aviator sunglasses flowing dress high slit barefoot outdoors bw"
+      },
+      {
+        "src": "/gallery/works-i/055-Woman-patterned-wide-brim-hat-sleeveless-dress-pendant-necklace-sunlight-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman patterned wide brim hat sleeveless dress pendant necklace sunlight bw"
+      },
+      {
+        "src": "/gallery/works-i/056-Woman-patterned-wide-brim-hat-beige-top-circular-necklace-sepia-tone.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman patterned wide brim hat beige top circular necklace sepia tone"
+      },
+      {
+        "src": "/gallery/works-i/070-Woman-off-shoulder-top-stone-arch-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman off shoulder top stone arch bw"
+      },
+      {
+        "src": "/gallery/works-i/071-Woman-eyes-closed-stone-wall-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman eyes closed stone wall bw"
+      },
+      {
+        "src": "/gallery/works-i/072-Woman-introspective-stone-wall-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman introspective stone wall bw"
+      },
+      {
+        "src": "/gallery/works-i/073-Woman-bare-shoulder-stone-arch-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman bare shoulder stone arch bw"
+      },
+      {
+        "src": "/gallery/works-i/074-Woman-off-shoulder-top-stone-wall-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman off shoulder top stone wall bw"
+      },
+      {
+        "src": "/gallery/works-i/075-Woman-leather-jacket-stone-alcove-sitting.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman leather jacket stone alcove sitting"
+      },
+      {
+        "src": "/gallery/works-i/077-Blonde-woman-leather-jacket-stone-window.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman leather jacket stone window"
+      },
+      {
+        "src": "/gallery/works-i/078-Woman-backlit-tank-top-portrait-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman backlit tank top portrait bw"
+      },
+      {
+        "src": "/gallery/works-i/079-Blonde-woman-white-sweater-stone-wall.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman white sweater stone wall"
+      },
+      {
+        "src": "/gallery/works-i/080-Blonde-woman-plaid-scarf-stone-wall-ivy.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman plaid scarf stone wall ivy"
+      },
+      {
+        "src": "/gallery/works-i/085-Woman-black-dress-zipper-back-over-shoulder.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black dress zipper back over shoulder"
+      },
+      {
+        "src": "/gallery/works-i/090-Woman-red-tropical-dress-tree-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red tropical dress tree portrait"
+      },
+      {
+        "src": "/gallery/works-i/092-Woman-red-tropical-top-tree-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red tropical top tree portrait"
+      },
+      {
+        "src": "/gallery/works-i/095-Woman-red-tropical-dress-tree-leaning.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red tropical dress tree leaning"
+      },
+      {
+        "src": "/gallery/works-i/097-Woman-red-tropical-dress-stone-wall-tattoos.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red tropical dress stone wall tattoos"
+      },
+      {
+        "src": "/gallery/works-i/099-Woman-red-tropical-romper-stone-arch.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red tropical romper stone arch"
+      },
+      {
+        "src": "/gallery/works-i/101-Woman-red-camisole-strawberry-smoothie.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman red camisole strawberry smoothie"
+      },
+      {
+        "src": "/gallery/works-i/102-Woman-smiling-pink-smoothie-strawberry.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman smiling pink smoothie strawberry"
+      },
+      {
+        "src": "/gallery/works-i/103-Woman-drinking-strawberry-smoothie-playful.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman drinking strawberry smoothie playful"
+      },
+      {
+        "src": "/gallery/works-i/121-Woman-green-sparkly-top-studio-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman green sparkly top studio portrait"
+      },
+      {
+        "src": "/gallery/works-i/122-Blonde-woman-over-shoulder-studio-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman over shoulder studio portrait"
+      },
+      {
+        "src": "/gallery/works-i/130-Blonde-woman-white-blazer-holding-pen.webp",
+        "alt": "JP Stern Fine Art Porträt — Blonde woman white blazer holding pen"
+      },
+      {
+        "src": "/gallery/works-i/131-Woman-white-blazer-black-crop-top-studio.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman white blazer black crop top studio"
+      },
+      {
+        "src": "/gallery/works-i/140-Woman-screaming-hands-on-head-crop-top.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman screaming hands on head crop top"
+      },
+      {
+        "src": "/gallery/works-i/141-Woman-crop-top-denim-shorts-tongue-out.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman crop top denim shorts tongue out"
+      },
+      {
+        "src": "/gallery/works-i/142-Woman-hand-in-hair-crop-top-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman hand in hair crop top bw"
+      },
+      {
+        "src": "/gallery/works-i/150-Smiling-woman-windblown-hair-profile-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Smiling woman windblown hair profile bw"
+      },
+      {
+        "src": "/gallery/works-i/152-Smiling-woman-smartwatch-hand-on-cheek-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Smiling woman smartwatch hand on cheek bw"
+      },
+      {
+        "src": "/gallery/works-i/153-Smiling-woman-rock-and-roll-dress-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Smiling woman rock and roll dress bw"
+      },
+      {
+        "src": "/gallery/works-i/154-Smiling-blond-woman-tank-top-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Smiling blond woman tank top bw"
+      },
+      {
+        "src": "/gallery/works-i/155-Woman-striped-halter-top-outdoor-portrait.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman striped halter top outdoor portrait"
+      },
+      {
+        "src": "/gallery/works-i/156-Freckled-woman-smiling-close-up-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Freckled woman smiling close up bw"
+      },
+      {
+        "src": "/gallery/works-i/160-Woman-black-bikini-beach-driftwood.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman black bikini beach driftwood"
+      },
+      {
+        "src": "/gallery/works-i/161-Woman-lace-dress-lifting-hem-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman lace dress lifting hem bw"
+      },
+      {
+        "src": "/gallery/works-i/162-Woman-pin-up-black-dress-polka-dot-heels-bw.webp",
+        "alt": "JP Stern Fine Art Porträt — Woman pin up black dress polka dot heels bw"
+      }
+    ]
   },
   {
     "slug": "works-ii",
     "title": "Sensual",
     "description": "Sensual und Implied Photography — JP Stern Photography.",
-    "images": []
+    "images": [
+      {
+        "src": "/gallery/works-ii/001-Woman-in-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/002-Woman-in-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/003-Woman-in-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/005-Finger-caressing-skin-sensually-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Finger caressing skin sensually bw"
+      },
+      {
+        "src": "/gallery/works-ii/010-Busty-woman-in-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Busty woman in lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/011-Busty-woman-in-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Busty woman in lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/014-Woman-in-lingerie-with-tattoos.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie with tattoos"
+      },
+      {
+        "src": "/gallery/works-ii/015-Woman-in-lingerie-with-tattoos.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie with tattoos"
+      },
+      {
+        "src": "/gallery/works-ii/020-Woman-in-bed-in-blue-pajama.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama"
+      },
+      {
+        "src": "/gallery/works-ii/021-Woman-in-bed-in-blue-pajama.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama"
+      },
+      {
+        "src": "/gallery/works-ii/022-Woman-in-bed-in-blue-pajama.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama"
+      },
+      {
+        "src": "/gallery/works-ii/023-Woman-in-bed-in-blue-pajama.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama"
+      },
+      {
+        "src": "/gallery/works-ii/025-Woman-in-bed-in-blue-pajama-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama bw"
+      },
+      {
+        "src": "/gallery/works-ii/026-Woman-in-bed-in-blue-pajama-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in bed in blue pajama bw"
+      },
+      {
+        "src": "/gallery/works-ii/030-Woman-in-lingerie-with-earrings-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie with earrings bw"
+      },
+      {
+        "src": "/gallery/works-ii/031-Woman-in-lingerie-with-earrings.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie with earrings"
+      },
+      {
+        "src": "/gallery/works-ii/032-Woman-in-lingerie-with-earrings.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in lingerie with earrings"
+      },
+      {
+        "src": "/gallery/works-ii/035-Woman-sunbathing-with-hat-only.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman sunbathing with hat only"
+      },
+      {
+        "src": "/gallery/works-ii/036-Woman-sunbathing-with-hat-only.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman sunbathing with hat only"
+      },
+      {
+        "src": "/gallery/works-ii/037-Woman-sunbathing-with-hat-only.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman sunbathing with hat only"
+      },
+      {
+        "src": "/gallery/works-ii/040-Woman-cooking-nude.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman cooking nude"
+      },
+      {
+        "src": "/gallery/works-ii/041-Woman-cooking-nude.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman cooking nude"
+      },
+      {
+        "src": "/gallery/works-ii/045-Woman-on-the-floor-nude.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on the floor nude"
+      },
+      {
+        "src": "/gallery/works-ii/046-Female-legs-in-high-heels-playful-with-lace-pantie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Female legs in high heels playful with lace pantie bw"
+      },
+      {
+        "src": "/gallery/works-ii/050-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/051-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/052-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/053-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/054-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/055-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/056-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/057-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/058-Asian-woman-in-the-pool-implied-nude-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool implied nude bw"
+      },
+      {
+        "src": "/gallery/works-ii/060-Asian-woman-in-the-pool-in-bikini.webp",
+        "alt": "JP Stern Sensual Fotografie — Asian woman in the pool in bikini"
+      },
+      {
+        "src": "/gallery/works-ii/065-Woman-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/066-Woman-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/067-Woman-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/068-Woman-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/069-Woman-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/070-Woman-in-red-lingerie-top.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red lingerie top"
+      },
+      {
+        "src": "/gallery/works-ii/071-Woman-in-red-lingerie-top.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red lingerie top"
+      },
+      {
+        "src": "/gallery/works-ii/072-Woman-in-red-lingerie-top.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red lingerie top"
+      },
+      {
+        "src": "/gallery/works-ii/073-Woman-in-red-lingerie-top-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red lingerie top bw"
+      },
+      {
+        "src": "/gallery/works-ii/075-Woman-in-red-lingerie-top-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red lingerie top bw"
+      },
+      {
+        "src": "/gallery/works-ii/078-Woman-topless-implied-nudity.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman topless implied nudity"
+      },
+      {
+        "src": "/gallery/works-ii/079-Woman-topless-implied-nudity.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman topless implied nudity"
+      },
+      {
+        "src": "/gallery/works-ii/080-Woman-in-white-top-almost-see-through-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in white top almost see through bw"
+      },
+      {
+        "src": "/gallery/works-ii/081-Woman-in-white-top-almost-see-through-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in white top almost see through bw"
+      },
+      {
+        "src": "/gallery/works-ii/083-Woman-in-black-leather-top-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black leather top bw"
+      },
+      {
+        "src": "/gallery/works-ii/084-Woman-in-black-leather-top-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black leather top bw"
+      },
+      {
+        "src": "/gallery/works-ii/090-Woman-in-summer-dress-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in summer dress high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/091-Woman-in-summer-dress-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in summer dress high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/100-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/101-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/102-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/103-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/104-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/105-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/106-Woman-on-couch-in-black-lingerie-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on couch in black lingerie bw"
+      },
+      {
+        "src": "/gallery/works-ii/110-Woman-in-black-lingerie-at-window-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie at window bw"
+      },
+      {
+        "src": "/gallery/works-ii/111-Woman-in-black-lingerie-at-window.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie at window"
+      },
+      {
+        "src": "/gallery/works-ii/112-Woman-in-black-lingerie-at-window-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie at window bw"
+      },
+      {
+        "src": "/gallery/works-ii/113-Woman-in-black-lingerie.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie"
+      },
+      {
+        "src": "/gallery/works-ii/114-Woman-in-black-lingerie-at-window.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie at window"
+      },
+      {
+        "src": "/gallery/works-ii/116-Woman-in-black-lingerie-at-window.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie at window"
+      },
+      {
+        "src": "/gallery/works-ii/120-Woman-in-black-corsett-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black corsett high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/121-Woman-in-black-corsett-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black corsett high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/122-Woman-in-black-corsett-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black corsett high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/125-Woman-in-black-lingerie-set.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie set"
+      },
+      {
+        "src": "/gallery/works-ii/126-Woman-in-black-lingerie-set.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie set"
+      },
+      {
+        "src": "/gallery/works-ii/127-Woman-in-black-lingerie-set.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in black lingerie set"
+      },
+      {
+        "src": "/gallery/works-ii/130-Woman-in-brigh-light-hiding-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in brigh light hiding nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/131-Woman-in-brigh-light-hiding-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in brigh light hiding nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/133-Woman-on-bed-on-belly-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on bed on belly implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/135-Woman-in-negliee-at-window-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in negliee at window bw"
+      },
+      {
+        "src": "/gallery/works-ii/136-Woman-face-and-decolletee-high-key-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman face and decolletee high key bw"
+      },
+      {
+        "src": "/gallery/works-ii/140-Two-women-on-bed-in-lingerie.webp",
+        "alt": "JP Stern Sensual Fotografie — Two women on bed in lingerie"
+      },
+      {
+        "src": "/gallery/works-ii/141-Two-women-on-bed-in-lingerie.webp",
+        "alt": "JP Stern Sensual Fotografie — Two women on bed in lingerie"
+      },
+      {
+        "src": "/gallery/works-ii/142-Two-women-on-bed-in-lingerie.webp",
+        "alt": "JP Stern Sensual Fotografie — Two women on bed in lingerie"
+      },
+      {
+        "src": "/gallery/works-ii/143-Two-women-on-bed-in-lingerie.webp",
+        "alt": "JP Stern Sensual Fotografie — Two women on bed in lingerie"
+      },
+      {
+        "src": "/gallery/works-ii/145-Woman-in-red-bra-thinking.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in red bra thinking"
+      },
+      {
+        "src": "/gallery/works-ii/147-Woman-from-behind-in-black-super-short-dress.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman from behind in black super short dress"
+      },
+      {
+        "src": "/gallery/works-ii/150-Woman-in-nightie-from-behind.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman in nightie from behind"
+      },
+      {
+        "src": "/gallery/works-ii/153-Blonde-woman-implied-nudity.webp",
+        "alt": "JP Stern Sensual Fotografie — Blonde woman implied nudity"
+      },
+      {
+        "src": "/gallery/works-ii/154-Blonde-woman-implied-nudity.webp",
+        "alt": "JP Stern Sensual Fotografie — Blonde woman implied nudity"
+      },
+      {
+        "src": "/gallery/works-ii/155-Female-spy-with-pistol-with-supressor-in-bathing-suit.webp",
+        "alt": "JP Stern Sensual Fotografie — Female spy with pistol with supressor in bathing suit"
+      },
+      {
+        "src": "/gallery/works-ii/157-Woman-on-bed-sleeping-implied-nudity-bw.webp",
+        "alt": "JP Stern Sensual Fotografie — Woman on bed sleeping implied nudity bw"
+      },
+      {
+        "src": "/gallery/works-ii/160-Legs-high-heels-and-the-Eiffel-tower.webp",
+        "alt": "JP Stern Sensual Fotografie — Legs high heels and the Eiffel tower"
+      }
+    ]
   },
   {
     "slug": "works-iii",
     "title": "Sensual Nude",
     "description": "Sensual Nude und Art Nude — JP Stern Photography.",
-    "images": []
+    "images": [
+      {
+        "src": "/gallery/works-iii/001-Frau-am-Fenster-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau am Fenster Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/002-Frau-am-Fenster-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau am Fenster Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/003-Frau-am-Fenster-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau am Fenster Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/007-Frau-im-Schattenspiel-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau im Schattenspiel Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/010-Blonde-Frau-am-Pool-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blonde Frau am Pool Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/011-Blonde-Frau-am-Pool-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blonde Frau am Pool Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/012-Blonde-Frau-am-Pool-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blonde Frau am Pool Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/013-Blonde-Frau-am-Pool-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blonde Frau am Pool Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/020-Frau-im-Gegenlicht-mit-Rose-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau im Gegenlicht mit Rose Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/021-Frau-im-Gegenlicht-mit-Rose-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau im Gegenlicht mit Rose Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/022-Frau-im-Gegenlicht-mit-Rose-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau im Gegenlicht mit Rose Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/023-Frau-im-Gegenlicht-mit-Stuhl-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau im Gegenlicht mit Stuhl Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/040-Frau-auf-Sofa-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau auf Sofa Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/041-Frau-auf-Sofa-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau auf Sofa Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/042-Frau-auf-Sofa-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau auf Sofa Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/043-Frau-auf-Sofa-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau auf Sofa Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/048-Blonde-Frau-oben-ohne-High-key-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blonde Frau oben ohne High key Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/050-Dunkelhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/051-Dunkelhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/052-Dunkelhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/053-Dunkelhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/054-Dunkelhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/055-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/056-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/057-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/058-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/059-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/060-Dunkelhaarige-Frau-Art-nude-dark.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Dunkelhaarige Frau Art nude dark"
+      },
+      {
+        "src": "/gallery/works-iii/065-Langhaarige-Frau-mit-verbundenen-Augen-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau mit verbundenen Augen Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/066-Langhaarige-Frau-mit-verbundenen-Augen-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau mit verbundenen Augen Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/067-Langhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/068-Langhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/069-Langhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/070-Langhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/071-Langhaarige-Frau-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Langhaarige Frau Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/075-Weiblicher-Torso-oben-ohne-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Weiblicher Torso oben ohne Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/076-Weiblicher-Torso-oben-ohne-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Weiblicher Torso oben ohne Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/077-Weiblicher-Torso-oben-ohne-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Weiblicher Torso oben ohne Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/078-Weiblicher-Torso-oben-ohne-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Weiblicher Torso oben ohne Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/079-Weiblicher-Torso-oben-ohne-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Weiblicher Torso oben ohne Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/080-Frau-oben-ohne-mit-Schmuck-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau oben ohne mit Schmuck Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/081-Frau-nackt-auf-Tisch-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau nackt auf Tisch Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/085-Frau-oben-ohne-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau oben ohne Art nude Low key"
+      },
+      {
+        "src": "/gallery/works-iii/087-Hände-auf-nacktem-weiblichen-Torso-Art-nude-High-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Hände auf nacktem weiblichen Torso Art nude High key"
+      },
+      {
+        "src": "/gallery/works-iii/090-Frau-liegend-seitlich-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau liegend seitlich oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/091-Blick-auf-ein-Lace-Pantie-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Blick auf ein Lace Pantie Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/095-Portrait-Frau-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Portrait Frau oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/096-Portrait-Frau-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Portrait Frau oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/097-Portrait-Frau-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Portrait Frau oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/098-Portrait-Frau-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Portrait Frau oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/099-Portrait-Frau-oben-ohne-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Portrait Frau oben ohne Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/105-Frau-in-Netzshirt-lachend-auf-Bett-Art-nude.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in Netzshirt lachend auf Bett Art nude"
+      },
+      {
+        "src": "/gallery/works-iii/110-Frau-in-schwarzen-Strümpfen-sitzend-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in schwarzen Strümpfen sitzend Art nude Low key"
+      },
+      {
+        "src": "/gallery/works-iii/111-Frau-in-schwarzen-Strümpfen-sitzend-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in schwarzen Strümpfen sitzend Art nude Low key"
+      },
+      {
+        "src": "/gallery/works-iii/112-Frau-in-schwarzen-Strümpfen-sitzend-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in schwarzen Strümpfen sitzend Art nude Low key"
+      },
+      {
+        "src": "/gallery/works-iii/113-Frau-in-schwarzen-Strümpfen-sitzend-oben-ohne-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in schwarzen Strümpfen sitzend oben ohne Art nude Low key"
+      },
+      {
+        "src": "/gallery/works-iii/114-Frau-in-schwarzen-Strümpfen-sitzend-oben-ohne-Art-nude-Low-key.webp",
+        "alt": "JP Stern Sensual Nude und Art Nude — Frau in schwarzen Strümpfen sitzend oben ohne Art nude Low key"
+      }
+    ]
   }
 ]

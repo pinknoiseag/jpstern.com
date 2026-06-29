@@ -13,6 +13,10 @@ web/yarn-error.log*
 web/pnpm-debug.log*
 web/.idea/
 
+# Server-only — nicht committen
+web/public/.htpasswd
+.htpasswd
+
 # Raw portfolio imports — sync/build locally, not in git (~300MB+)
 web/portfolio-inbox/**
 !web/portfolio-inbox/.gitkeep

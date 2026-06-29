@@ -8,6 +8,8 @@ RewriteEngine On
 RewriteRule ^home-hero/?$ / [R=301,L]
 RewriteRule ^about-me/?$ /about/ [R=301,L]
 RewriteRule ^kontakt/?$ /contact/ [R=301,L]
+RewriteRule ^impressum/?$ /impressum/ [R=301,L]
+RewriteRule ^datenschutz/?$ /datenschutz/ [R=301,L]
 
 # SPA-style: existierende Dateien/Ordner direkt ausliefern
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -32,10 +34,12 @@ RewriteRule ^ index.html [L]
   </FilesMatch>
 </IfModule>
 
-# Pre-Shoot: Basic Auth (optional — .htpasswd auf Hostpoint anlegen)
-# <LocationMatch "^/(pre-shoot|pre-shoot-)">
-#   AuthType Basic
-#   AuthName "Pre-Shoot"
-#   AuthUserFile /home/USER/www/jpstern.com/.htpasswd
-#   Require valid-user
-# </LocationMatch>
+# Pre-Shoot: HTTP Basic Auth (nach Deploy aktivieren)
+# 1) Auf Hostpoint: bash deploy/setup-htpasswd.sh  →  .htpasswd im Webroot
+# 2) __HOSTPOINT_WEBROOT__ durch absoluten Pfad ersetzen (siehe deploy/hostpoint-path.txt)
+<If "%{REQUEST_URI} =~ m#^/(pre-shoot|pre-shoot-)#">
+  AuthType Basic
+  AuthName "Pre-Shoot"
+  AuthUserFile __HOSTPOINT_WEBROOT__/.htpasswd
+  Require valid-user
+</If>

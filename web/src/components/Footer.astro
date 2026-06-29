@@ -50,6 +50,12 @@ const contact = {
       </a>
     </div>
 
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <a href="/impressum/">Impressum</a>
+      <span aria-hidden="true">·</span>
+      <a href="/datenschutz/">Datenschutz</a>
+    </nav>
+
     <p class="copy">© {year} JP Stern Photography</p>
   </div>
 </footer>
@@ -106,6 +112,29 @@ const contact = {
   .footer-link svg {
     flex-shrink: 0;
     opacity: 0.85;
+  }
+
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem 0.85rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+  }
+
+  .footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover {
+    color: var(--gold);
+  }
+
+  .footer-legal span {
+    color: rgba(255, 255, 255, 0.25);
   }
 
   .copy {

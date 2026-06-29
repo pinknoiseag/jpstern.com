@@ -19,9 +19,9 @@ const meta = fs.existsSync(metaFile) ? JSON.parse(fs.readFileSync(metaFile, 'utf
 
 function altFromFilename(file, cfg) {
   const stem = file.replace(/\.[^.]+$/, '').replace(/^jp-stern-/, '');
-  const readable = stem.replace(/-/g, ' ');
+  const description = stem.replace(/^\d+-/, '').replace(/-/g, ' ');
   const base = cfg?.altBase || cfg?.title || 'JP Stern Photography';
-  return `${base} — ${readable}`;
+  return `${base} — ${description}`;
 }
 
 const manifest = Object.entries(config).map(([slug, cfg]) => {

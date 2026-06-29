@@ -1,0 +1,63 @@
+---
+import type { LegalSection } from '../data/legal';
+
+interface Props {
+  sections: LegalSection[];
+}
+
+const { sections } = Astro.props;
+---
+
+<article class="legal-prose">
+  {
+    sections.map((section) => (
+      <section class="legal-block" id={section.id}>
+        <h2>{section.title}</h2>
+        {section.paragraphs.map((p) => (
+          <p set:html={p.replace(/\n/g, '<br />')} />
+        ))}
+        {section.list && (
+          <ul>
+            {section.list.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))
+  }
+</article>
+
+<style>
+  .legal-prose {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  .legal-block {
+    margin-bottom: 2.25rem;
+  }
+  .legal-block h2 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--silver);
+    margin: 0 0 0.85rem;
+    letter-spacing: 0.02em;
+  }
+  .legal-block p {
+    margin: 0 0 0.85rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.75;
+  }
+  .legal-block ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: rgba(255, 255, 255, 0.82);
+  }
+  .legal-block li {
+    margin-bottom: 0.45rem;
+  }
+  .legal-block :global(a) {
+    color: var(--gold);
+  }
+</style>

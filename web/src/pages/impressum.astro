@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import LegalProse from '../components/LegalProse.astro';
+import { impressumSections } from '../data/legal';
+---
+
+<Layout
+  title="Impressum"
+  description="Impressum und rechtliche Angaben zu JP Stern Photography."
+>
+  <PageHero title="Impressum" subtitle="Angaben gemäss Schweizer Recht" image="/images/hero/03.webp" />
+
+  <section class="legal-section">
+    <div class="container">
+      <LegalProse sections={impressumSections} />
+      <p class="legal-nav">
+        <a href="/datenschutz/">Datenschutzerklärung</a>
+        ·
+        <a href="/contact/">Kontakt</a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-section {
+    padding: 3rem 0 4.5rem;
+  }
+  .legal-nav {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .legal-nav a {
+    color: var(--gold);
+  }
+</style>

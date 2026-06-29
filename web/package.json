@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/optimize-images.mjs && node scripts/generate-preshoot-manifest.mjs && node scripts/generate-gallery-manifest.mjs",
     "optimize-images": "node scripts/optimize-images.mjs",
-    "build": "astro build",
+    "build": "astro build && node scripts/copy-htaccess-for-deploy.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "sync": "node scripts/sync-assets.mjs",

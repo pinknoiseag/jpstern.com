@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+import { portfolioEntries } from '../data/portfolio';
+---
+
+<Layout
+  title="Portfolio"
+  description="Portfolio — Porträts, Sensual und Art Nude. JP Stern Photography."
+>
+  <PageHero
+    title="Portfolio"
+    subtitle="Wähle eine Galerie"
+    image="/images/hero/01.webp"
+  />
+
+  <section class="portfolio-section">
+    <div class="container">
+      <ul class="portfolio-grid">
+        {portfolioEntries.map((item) => (
+          <li>
+            <a href={item.href} class="portfolio-card">
+              {item.cover ? (
+                <img src={item.cover} alt="" loading="lazy" width="640" height="800" />
+              ) : (
+                <div class="portfolio-placeholder" aria-hidden="true" />
+              )}
+              <span class="portfolio-label">
+                <span class="portfolio-title">{item.title}</span>
+                <span class="portfolio-meta">{item.count} Bilder</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .portfolio-section {
+    padding: 3rem 0 4.5rem;
+  }
+  .portfolio-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 960px;
+    margin-inline: auto;
+  }
+  .portfolio-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 4 / 5;
+    background: #111;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .portfolio-card:hover {
+    border-color: rgba(201, 168, 106, 0.4);
+  }
+  .portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease, opacity 0.3s;
+  }
+  .portfolio-card:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+  .portfolio-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  }
+  .portfolio-label {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82), transparent);
+  }
+  .portfolio-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: #fff;
+  }
+  .portfolio-meta {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      max-width: 22rem;
+    }
+  }
+</style>

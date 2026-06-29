@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeroSlider from '../components/HeroSlider.astro';
 import { faqHomeItems } from '../data/faq';
+import { portfolioEntries } from '../data/portfolio';
 
 const styles = [
   { title: 'Porträt', desc: 'Ausdruck, Persönlichkeit, Blick' },
@@ -10,11 +11,11 @@ const styles = [
   { title: 'Art Nude', desc: 'Körper als Kunst, zeitlos' },
 ];
 
-const worksPreview = [
-  { href: '/works-i/', image: '/images/hero/01.webp', label: 'Works I' },
-  { href: '/works-ii/', image: '/images/hero/02.webp', label: 'Works II' },
-  { href: '/works-iii/', image: '/images/hero/03.webp', label: 'Works III' },
-];
+const worksPreview = portfolioEntries.map((entry) => ({
+  href: entry.href,
+  image: entry.cover ?? '/images/hero/01.webp',
+  label: entry.title,
+}));
 
 const steps = [
   { n: '01', title: 'Anfrage', text: 'Kurz beschreiben, was du dir vorstellst — Stil, Stimmung, Rahmen.' },
@@ -91,7 +92,7 @@ const steps = [
           <p class="home-eyebrow">Portfolio</p>
           <h2>Works</h2>
         </div>
-        <a href="/works-i/" class="text-link">Alle Galerien →</a>
+        <a href="/portfolio/" class="text-link">Alle Galerien →</a>
       </header>
       <ul class="works-grid">
         {worksPreview.map((item) => (

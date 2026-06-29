@@ -10,6 +10,7 @@ RewriteRule ^about-me/?$ /about/ [R=301,L]
 RewriteRule ^kontakt/?$ /contact/ [R=301,L]
 RewriteRule ^impressum/?$ /impressum/ [R=301,L]
 RewriteRule ^datenschutz/?$ /datenschutz/ [R=301,L]
+RewriteRule ^works/?$ /portfolio/ [R=301,L]
 
 # SPA-style: existierende Dateien/Ordner direkt ausliefern
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -40,6 +41,6 @@ RewriteRule ^ index.html [L]
 <If "%{REQUEST_URI} =~ m#^/(pre-shoot|pre-shoot-)#">
   AuthType Basic
   AuthName "Pre-Shoot"
-  AuthUserFile __HOSTPOINT_WEBROOT__/.htpasswd
+  AuthUserFile /home/hpsterm/www/jpstern.com/.htpasswd
   Require valid-user
 </If>

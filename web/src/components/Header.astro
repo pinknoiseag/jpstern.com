@@ -1,13 +1,21 @@
 ---
 const nav = [
   { href: '/', label: 'Home' },
-  { href: '/works-i/', label: 'Portfolio' },
+  { href: '/portfolio/', label: 'Portfolio' },
   { href: '/faq/', label: 'FAQ' },
   { href: '/contact/', label: 'Kontakt' },
   { href: '/about/', label: 'About Me' },
 ];
 
 const path = Astro.url.pathname;
+
+function isNavActive(href: string): boolean {
+  const normalized = path.endsWith('/') ? path : `${path}/`;
+  if (href === '/portfolio/') {
+    return normalized === '/portfolio/' || normalized.startsWith('/works-');
+  }
+  return normalized === href;
+}
 
 const contact = {
   instagram: 'https://www.instagram.com/jpstern.photography/',
@@ -67,7 +75,7 @@ const contact = {
       {nav.map((item) => (
         <a
           href={item.href}
-          class:list={['nav-link', { active: path === item.href || path === item.href.replace(/\/$/, '') }]}
+          class:list={['nav-link', { active: isNavActive(item.href) }]}
         >
           {item.label}
         </a>

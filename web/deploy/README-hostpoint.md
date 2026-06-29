@@ -8,14 +8,16 @@ npm run sync          # Bilder von Live-Site (einmalig / bei Updates)
 npm run build
 ```
 
-Ergebnis: `dist/` — kompletten Inhalt nach `~/www/jpstern.com/` hochladen (SFTP).
+Ergebnis: `dist/` — kompletten Inhalt nach `~/www/jpstern.com/` hochladen (SFTP / File Manager).
 
 ## WordPress ersetzen
 
 1. **Backup** von `wp-content/uploads/` (falls noch nicht lokal)
 2. Inhalt von `~/www/jpstern.com/` löschen **ausser** ggf. `.htpasswd`
 3. `dist/*` hochladen
-4. `send-selection.php` liegt in `dist/` (Root)
+4. **`htaccess-upload.txt`** hochladen und auf dem Server in **`.htaccess`** umbenennen  
+   (Punktdateien sieht der File Manager oft nicht — lokal liegt `.htaccess` trotzdem in `dist/`)
+5. `send-selection.php` liegt in `dist/` (Root)
 5. SSL prüfen (Let's Encrypt bleibt)
 
 ## Pre-Shoot serverseitig schützen (empfohlen)
@@ -30,11 +32,11 @@ bash deploy/setup-htpasswd.sh
 # Benutzer: jpstern — Passwort z. B. Pre-Shoot (oder neu wählen)
 ```
 
-**Vor dem Deploy lokal:**
+**Deploy:**
 
-1. In `public/.htaccess` den Platzhalter `__HOSTPOINT_WEBROOT__` durch den absoluten Webroot-Pfad ersetzen (siehe `deploy/hostpoint-path.txt`, typisch `/home/BENUTZER/www/jpstern.com`).
-2. `npm run build`
-3. `dist/*` hochladen — **`.htpasswd` separat ins Webroot**, falls nicht schon dort.
+1. `npm run build`
+2. `dist/*` nach `~/www/jpstern.com/` hochladen
+3. `.htpasswd` separat ins gleiche Verzeichnis (nach `setup-htpasswd.sh`)
 
 `.htpasswd` nie ins Git committen (steht in `.gitignore`).
 

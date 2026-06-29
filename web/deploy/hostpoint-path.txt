@@ -4,14 +4,12 @@
 #   cd ~/www
 #   pwd
 #
-# Varianten:
-#   /home/BENUTZERNAME/www              (Domain direkt im www-Root)
-#   /home/BENUTZERNAME/www/jpstern.com    (Unterordner pro Domain)
+# jpstern.com (bestätigt):
+#   ~/www/jpstern.com
+#   /home/hpsterm/www/jpstern.com
 #
-# In web/public/.htaccess ersetzen:
-#   __HOSTPOINT_WEBROOT__
-# durch den Ausgabe von pwd, z.B.:
-#   /home/BENUTZERNAME/www
+# In public/.htaccess ist AuthUserFile bereits gesetzt auf:
+#   /home/hpsterm/www/jpstern.com/.htpasswd
 #
-# .htpasswd liegt im gleichen Ordner wie index.html:
-#   /home/BENUTZERNAME/www/.htpasswd
+# Falls pwd auf dem Server einen anderen Benutzernamen zeigt, nur diesen
+# einen Pfad in .htaccess anpassen und neu builden.

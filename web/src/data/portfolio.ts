@@ -8,11 +8,13 @@ export type PortfolioEntry = {
   description: string;
   cover: string | null;
   count: number;
+  menuLabel: string;
 };
 
 const order = ['works-i', 'works-ii', 'works-iii'] as const;
+const worksLabels = ['Works I', 'Works II', 'Works III'] as const;
 
-export const portfolioEntries: PortfolioEntry[] = order.map((slug) => {
+export const portfolioEntries: PortfolioEntry[] = order.map((slug, index) => {
   const gallery = manifest.find((g) => g.slug === slug);
   const cfg = config[slug as keyof typeof config];
   return {
@@ -22,5 +24,6 @@ export const portfolioEntries: PortfolioEntry[] = order.map((slug) => {
     description: gallery?.description ?? cfg?.description ?? '',
     cover: gallery?.images[0]?.src ?? null,
     count: gallery?.images.length ?? 0,
+    menuLabel: worksLabels[index],
   };
 });

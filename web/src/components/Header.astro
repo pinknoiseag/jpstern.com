@@ -33,7 +33,15 @@ const contact = {
   <div class="header-inner container">
     <div class="header-top">
       <a href="/" class="logo-link">
-        <img src="/images/logo.png" alt="JP Stern Photography" width="320" height="148" />
+        <img
+          src="/images/logo.png"
+          srcset="/images/logo.png 1x, /images/logo.png 2x"
+          alt="JP Stern Photography"
+          width="1179"
+          height="543"
+          decoding="async"
+          fetchpriority="high"
+        />
       </a>
 
       <div class="header-meta">
@@ -168,9 +176,11 @@ const contact = {
   }
 
   .logo-link img {
-    height: 72px;
+    height: 104px;
     width: auto;
+    max-width: min(100%, 240px);
     display: block;
+    image-rendering: auto;
   }
 
   .header-meta {
@@ -379,7 +389,8 @@ const contact = {
 
   @media (max-width: 520px) {
     .logo-link img {
-      height: 64px;
+      height: 84px;
+      max-width: min(100%, 200px);
     }
 
     .header-tagline {

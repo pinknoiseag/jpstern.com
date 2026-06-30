@@ -11,11 +11,6 @@ RewriteRule ^kontakt/?$ /contact/ [R=301,L]
 RewriteRule ^impressum/?$ /impressum/ [R=301,L]
 RewriteRule ^datenschutz/?$ /datenschutz/ [R=301,L]
 RewriteRule ^works/?$ /portfolio/ [R=301,L]
-
-# SPA-style: existierende Dateien/Ordner direkt ausliefern
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
 </IfModule>
 
 # Browser-Cache (ersetzt WP Rocket für Statik)

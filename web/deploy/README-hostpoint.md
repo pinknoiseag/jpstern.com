@@ -35,7 +35,9 @@ bash deploy/setup-htpasswd.sh
 **Deploy:**
 
 1. `npm run build`
-2. `dist/*` nach `~/www/jpstern.com/` hochladen
+2. `dist/*` nach `~/www/jpstern.com/` hochladen  
+   **Wichtig:** Root-`index.html` = Homepage (~21 KB, Titel «JP Stern Photography»).  
+   Nicht die Pre-Shoot-Datei (~70 KB, «Pre-Shoot Stilabklärung») ins Root legen.
 3. `.htpasswd` separat ins gleiche Verzeichnis (nach `setup-htpasswd.sh`)
 
 `.htpasswd` nie ins Git committen (steht in `.gitignore`).
